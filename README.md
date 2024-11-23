@@ -225,8 +225,8 @@ float f = reinterpret_cast<float&>(i); // 重新解释将int类型转换为float
    - `long`：用于表示长整数，通常占用4个字节。
    - `long long`：用于表示更长的整数，通常占用8个字节。
 2. 浮点类型（Floating-Point Types）：
-   - `float`：用于表示单精度浮点数，通常占用4个字节。
-   - `double`：用于表示双精度浮点数，通常占用8个字节。
+   - `float`：用于表示单精度浮点数，通常占用4个字节。![img](https://www.runoob.com/wp-content/uploads/2014/09/v2-749cc641eb4d5dafd085e8c23f8826aa_hd.png)
+   - `double`：用于表示双精度浮点数，通常占用8个字节。![img](https://www.runoob.com/wp-content/uploads/2014/09/v2-48240f0e1e0dd33ec89100cbe2d30707_hd.png)
    - `long double`：用于表示更高精度的浮点数，占用字节数可以根据实现而变化。
 3. 字符类型（Character Types）：
    - `char`：用于表示字符，通常占用1个字节。
