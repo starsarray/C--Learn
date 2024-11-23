@@ -203,7 +203,7 @@ float f = reinterpret_cast<float&>(i); // 重新解释将int类型转换为float
 
 ## 变量类型
 
-
+*C++ 标准规定的最小要求*：
 
 1. 整数类型（Integer Types）：
    - `int`：用于表示整数，通常占用4个字节。
