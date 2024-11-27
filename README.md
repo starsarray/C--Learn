@@ -643,3 +643,115 @@ C++ 提供了以下两种类型的字符串表示形式：
 | [<iostream>](https://www.runoob.com/cplusplus/cpp-libs-iostream.html) | 该文件定义了 **cin、cout、cerr** 和 **clog** 对象，分别对应于标准输入流、标准输出流、非缓冲标准错误流和缓冲标准错误流。 |
 | [<iomanip>](https://www.runoob.com/cplusplus/cpp-libs-iomanip.html) | 该文件通过所谓的参数化的流操纵器（比如 **setw** 和 **setprecision**），来声明对执行标准化 I/O 有用的服务。 |
 | [<fstream>](https://www.runoob.com/cplusplus/cpp-libs-fstream.html) | 该文件为用户控制的文件处理声明服务。我们将在文件和流的相关章节讨论它的细节。 |
+
+***
+
+## 结构体
+
+C/C++ 数组允许定义可存储相同类型数据项的变量
+
+而**结构**是 C++ 中另一种用户自定义的可用的数据类型，允许存储不同类型的数据项
+
+**结构体优点：**
+
+- **简单数据封装**：适合封装多种类型的简单数据，通常用于数据的存储
+- **轻量级**：相比 `class`，结构体语法更简洁，适合小型数据对象
+- **面向对象支持**：支持构造函数、成员函数和访问权限控制，可以实现面向对象的设计
+
+### 结构体的各个部分详细介绍
+
+- **struct 关键字：**用于定义结构体，它告诉编译器后面要定义的是一个自定义类型
+- **成员变量：**成员变量是结构体中定义的数据项，它们可以是任何基本类型或其他自定义类型。在 struct 中，这些成员默认是 public，可以直接访问
+- **成员函数：**结构体中也可以包含成员函数，这使得结构体在功能上类似于类。成员函数可以操作结构体的成员变量，提供对数据的封装和操作
+- **访问权限：**与 class 类似，你可以在 struct 中使用 public、private 和 protected 来定义成员的访问权限。在 struct 中，默认所有成员都是 public，而 class 中默认是 private
+
+### 指向结构的指针
+
+必须使用 `-> `运算符访问
+
+***
+
+## vector 容器
+
+vector 是基于数组的数据结构，可以自动管理内存
+
+要使用 vector，首先需要包含 **<vector>** 头文件
+
+**创建 Vector**
+
+```C++
+std::vector<int> myVector; // 创建一个存储整数的空 vector
+```
+
+这将创建一个空的整数向量,也可以在创建时指定初始大小和初始值：
+
+```C++
+std::vector<int> myVector(5); // 创建一个包含 5 个整数的 vector，每个值都为默认值（0）
+std::vector<int> myVector(5, 10); // 创建一个包含 5 个整数的 vector，每个值都为 10
+```
+
+或：
+
+```C++
+std::vector<int> vec; // 默认初始化一个空的 vector
+std::vector<int> vec2 = {1, 2, 3, 4}; // 初始化一个包含元素的 vector
+```
+
+**添加元素**
+
+可以使用 push_back 方法向 vector 中添加元素：
+
+```C++
+myVector.push_back(7); // 将整数 7 添加到 vector 的末尾
+```
+
+**访问元素**
+
+可以使用下标操作符 [] 或 at() 方法访问 vector 中的元素：
+
+```C++
+int x = myVector[0]; // 获取第一个元素
+int y = myVector.at(1); // 获取第二个元素
+```
+
+**获取大小**
+
+可以使用 size() 方法获取 vector 中元素的数量：
+
+```C++
+int size = myVector.size(); // 获取 vector 中的元素数量
+```
+
+**迭代访问**
+
+可以使用迭代器遍历 vector 中的元素：
+
+```C++
+for (auto it = myVector.begin(); it != myVector.end(); ++it) {
+    std::cout << *it << " ";
+}
+```
+
+或者使用范围循环：
+
+```C++
+for (int element : myVector) {
+    std::cout << element << " ";
+}
+```
+
+**删除元素**
+
+可以使用 erase() 方法删除 vector 中的元素：
+
+```C++
+myVector.erase(myVector.begin() + 2); // 删除第三个元素
+```
+
+**清空 Vector**
+
+可以使用 clear() 方法清空 vector 中的所有元素：
+
+```C++
+myVector.clear(); // 清空 vector
+```
