@@ -1,0 +1,3 @@
+This will be written to the file but not immediately.
+Flushing file buffer manually now.
+End of file output with buffer.
